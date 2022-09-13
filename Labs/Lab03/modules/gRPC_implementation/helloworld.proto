@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package helloworld;
+
+//the greeting service generation
+service User{
+    //sends a greeting
+    rpc createUser(CreateRequest) returns (CreateResponce);
+}
+
+//the request message with the user's name.
+message CreateRequest {
+    string username = 1;
+    string firstname = 2;
+    string lastname = 3;
+    string email = 4;
+}
+
+//the response message with the greetings
+message CreateResponce{
+    string userid = 1;
+}
